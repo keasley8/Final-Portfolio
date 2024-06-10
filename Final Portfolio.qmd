@@ -1,0 +1,841 @@
+---
+title: "Final Portfolio"
+author: "Kai Easley"
+format: html
+editor: visual
+self-contained: true
+---
+
+```{r}
+#| include: false
+#| label: packages-portfolio-objectives
+
+library(tidyverse)
+
+portfolio_levels <- tibble(
+  Objective = character(), 
+  Level = numeric() 
+  )
+```
+
+# Independent Learning (IL)
+
+------------------------------------------------------------------------
+
+## IL-1 Adding new skills:
+
+-   I can find and adopt new packages to accomplish tasks.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) I had not used leaflet before this lab, so I was able to learn to read in JSON data and join it with the main data set we were using for the lab in order to recreate and improve the map visual.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) I had also not yet used the plotly package before, but I was able to figure out how to incorporate it in the context of the Shiny App by making a pie chart with it.
+
+-   I can adapt to different syntax styles (tidy, base, formula style, data.table).
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) This Pull Request demonstrates function writing and tidyverse syntax in the Shiny App. Both of these styles differed in the syntax to write.
+
+-   I can use tutorials, etc. to enhance my understanding of new concepts
+
+No specific Pull Request for this concept; however, the videos for each week's check-ins introduced me to new coding techniques and/or styles, such as data.table or watching the tutorial on the selector gadget tool so that I could select html nodes easier when web-scraping.
+
+```{r}
+#| include: false
+#| label: IL-1
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "IL-1",
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I have earned proficiency in this objective because I have shown that I am capable of successfully learning and incorporating new packages and coding styles in R, such as learning to map in leaflet and use plotly to code in the Shiny App when I have not had previous experience with it. I am also able to adapt and use different R syntax's, and while I don't have specific pull requests for it, I have used the tutorials for the weekly check-ins to enhance my knowledge in R.
+
+------------------------------------------------------------------------
+
+## IL-2 Online resources:
+
+-   I can use online resources (Google, ChatGPT, StackOverflow) to solve problems, debug, or find new tools.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) I did not have experience with a Shiny app before, but with the help of online resources such as Chat GPT as well as help from my group when needed, I was able to code the pie chart and contribute to the Shiny app's functionality.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) I used ChatGPT as well as a post from an R bloggers site to help me figure out parts of my generative art code.
+
+-   I can find source code for similar projects to use as starting points for my own
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) I used a JSON file I found on another repository to read in world countries' longitude and latitude so that I could map in leaflet.
+
+-   I can read the documentation of an API to figure out how to access data.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-3-using-apis-evadykaar/pull/5/files) This is not a Pull Request made by me but it was worked on together in class. The code in this Pull Request shows reading in the API so that we can start analyzing it in R.
+
+```{r}
+#| include: false
+#| label: IL-2
+
+## Fill in the line below with your self-assigned level for this objective.
+## Remember, you have the following levels to choose from:
+
+# 1 = novice
+# 2 = proficiency
+# 3 = mastery 
+# 4 = expert
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "IL-2",
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I have earned proficiency in this objective because I have demonstrated that I know how to use outside sources such as ChatGPT and other blog sites such as R Bloggers to help assist in my code and further my knowledge in the topic. I have also shown that I know how to find source code through other available repositories to implement into my own code as well as being able to read in an API.
+
+------------------------------------------------------------------------
+
+# Reproducible Workflow (RW):
+
+## RW-1 File, code, and data management:
+
+-   I can use Git and GitHub to track my progress and collaborate (creating repos, cloning, forking, pull requesting).
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/6c65d99d57e76e938c2d8820d996109801ffd502) This was the R Project/Github Repository that I created for Lab 9, I created the repository in Github and then cloned it into R.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-3-using-apis-evadykaar/pull/11) Example of a Pull Request I made for the API lab, I used the usethis package to create a branch (in this example named someFixes), commit my changes, push my changes with pr_push(), and then use pr_finish() to delete my branch after it has been merged into the main branch.
+
+-   I always use R Projects and the {here} package to organize my scripts, notebooks, data, and applications.
+
+No specific link for a Pull Request for this one but I always create new R projects whenever we start a new lab/project/practice activity.
+
+------------------------------------------------------------------------
+
+```{r}
+#| include: false
+#| label: RW-1
+
+my_level <- 1
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "RW-1",
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+------------------------------------------------------------------------
+
+## RW-2 Notebooks:
+
+-   I can use Quarto and/or R Markdown to produce a reproducible notebook and polished rendered document.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) This demonstrates knowledge of the YAML, as I changed the options to better accomodate the output of the rendered document as well as create a theme for the rendered version.
+
+-   I can use appropriate chunk options (echo, error, cache, etc.) to render my qmd/Rmd quickly and cleanly.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) Same link as above, this shows usage of the "echo" option in the YAML.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/introduction-to-webscraping-keasley8/pull/5/files) I did not make this pull request; however, this was worked on together in class. This demonstrates use of the "message: false" code chunk option as well as labels in the code chunks.
+
+```{r, include = FALSE}
+#| include: false
+#| label: RW-2
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "RW-2",
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I have earned proficiency in this objective, I have shown knowledge of YAML options and how they can be used to influence the output of the Quarto or R Markdown document.
+
+------------------------------------------------------------------------
+
+## RW-3 Code style
+
+-   My code is clear, readable, well-organized, and well-commented.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) This demonstrates code that is commented through for the Generative Art lab. It explains where I used outside sources to complete the code, as well as explaining how the code works and walking through what it means. The code is also formatted in an aesthetically pleasing way so that it is readable and well-organized.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/introduction-to-webscraping-keasley8/pull/3/files) Not a Pull Request from me directly but this was worked on in class. This shows code that is commented through, as well as giving credit to Stack Overflow for helping with a loop. The format of the code is readable and reproducible, so if changes need to be made it is easy to find where to make them.
+
+-   I can use a package-based workflow to organize my analyses
+
+[Link to Pull Request](https://github.com/aibarra21/horoscoper/pull/5/files) This Pull Request shows the get_zodiac_sign function. It was made in its own .R file, which demonstrates a package-based workflow.
+
+```{r}
+#| include: false
+#| label: RW-3
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "RW-3",
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification
+
+I think that I am proficient in this objective, I have shown that I know how to comment through my code and make sure that the code is organized in a neat and professional way so that it is readable, reproducible, and clear.
+
+------------------------------------------------------------------------
+
+# Technical Communication (TC):
+
+*These objectives show your ability to communicate the processes you have implemented in your code, as well as the data conclusions and results.*
+
+------------------------------------------------------------------------
+
+## TC-1 Project summaries:
+
+-   I can clearly and succinctly summarize the contributions of my project.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files)
+Recreated leaflet map that improves upon the previous visualization
+
+-   I accurately interpret statistical or modeling results.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) This leaflet mapping code accurately represents the proportion of people who have confidence in their countries' hospitals and health clinics, and is color coded by the countries' respective percentages
+
+-   I consider the appropriate scope and impact of my project results.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files)
+
+Same Pull Request as above, the code presented filters the data set correctly so that we are mapping the correct information and have the appropriate scope.
+
+```{r}
+#| include: false
+#| label: TC-1
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "TC-1", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+I think that I am proficient in this objective because I have been able to
+accurately incorporate the appropriate scope, as well as efficiently clean up
+the data set to model and map statistical results.
+
+------------------------------------------------------------------------
+
+## TC-2 Documentation:
+
+-   I provide ample documentation and tutorials for my custom functions.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) This demonstrates well-commented through code that documents how I wrote the function for the generated circles code
+
+-   I provide user-friendly guides for my tools and software
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/c020f989776af5275f26169fda2876811b9a115b) This Pull Request shows that the code is user-friendly since it demonstrates well-commented code, so people are able to easily read and understand the thought process
+
+[Link to Pull Request](https://github.com/aibarra21/horoscoper/pull/39) This Pull Request shows the commented through get_zodiac_sign function to show how it was written and packages used to write it.
+
+```{r}
+#| include: false
+#| label: TC-2
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "TC-2", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I am proficient in this objective, I have enough evidence to show that I know how to document code and create user-friendly, readable code and output.
+
+------------------------------------------------------------------------
+
+# Data Manipulation (DM):
+
+*These objectives relate to the collection, cleaning, processing, and preparing of datasets for analysis.*
+
+------------------------------------------------------------------------
+
+## DM-1 Data preparation:
+
+-   I can read in datasets to R, including untidy ones.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-3-using-apis-evadykaar/pull/5/files) This Pull Request is not from me but it is from code worked on together in class. It shows the untidy API data being read into R
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/19/files) This shows JSON data being read into R in order to map in Leaflet
+
+-   I can clean datasets to deal with missing data, typos, poor formatting, etc.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-3-using-apis-evadykaar/pull/5/files) Not a Pull Request from me but it was worked on in class. It shows untidy and poorly formatted data being read into R in a properly formatted way so that we can proceed with further analysis.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/16/files) This Pull Request shows data being cleaned, mainly with a case_when() statement. While this cleaned version of the data did not end up being used for the final leaflet map, it demonstrates knowledge of how to clean and prep data.
+
+```{r, include = FALSE}
+#| include: false
+#| label: DM-1
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "DM-1", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I have demonstrated proficiency in this objective. I gained experience and knowledge reading untidy data, such as the API and JSON data. After reading it in, my partners and I then cleaned up the data to prep it for either visualization or further analysis.
+
+------------------------------------------------------------------------
+
+## DM-2 Data wrangling
+
+-   I can cleverly use pivoting, grouping, and joining to wrangle data.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) Used a left_join() to finish reading in the JSON data so that it could be mapped in leaflet.
+
+-   I can use mapping ({purrr}), applying (tapply, lapply, ...), and/or iteration (for loops) to perform repeated tasks.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) This shows an lapply being used in line 117 to make the circles_list() function.
+
+```{r, include = FALSE}
+#| include: false
+#| label: DM-2
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "DM-2",
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think I have demonstrated proficiency in this objective, I've shown that I have the knowledge to iterate and join data to complete a task, or so that it is properly formatted to either visualize or continue to analyze.
+
+------------------------------------------------------------------------
+
+## DM-3 Data formats
+
+-   I can use API urls to access JSON data and convert it to a data frame [Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-3-using-apis-evadykaar/pull/5/files) This shows an API url being read in to access JSON data
+
+```{r, include = FALSE}
+## Fill in the line below with your self-assigned level for this objective.
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(tibble(Objective = "DM-3", 
+                   Level = my_level))
+```
+
+### Level: `r my_level`
+
+### Justification
+
+I think I have demonstrated proficiency in this objective, my group and I successfully used the API urls so access the JSON data and continue our analysis after it had been converted to a data frame.
+
+------------------------------------------------------------------------
+
+## DM-4 Data collection
+
+-   I can webscrape simple tables and information
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/introduction-to-webscraping-keasley8/pull/3/files) Not a Pull Request from me but this is from code worked on together in class. This shows data from the cheese website being scraped and saved into a data frame.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/introduction-to-webscraping-keasley8/pull/7/files) Not a Pull Request from me, but it is from code worked on together in class. This also shows data being scraped from the cheese webpage.
+
+```{r}
+#| include: false
+#| label: DM-4
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "DM-4", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification
+
+I think that I am proficient in this objective. I know how to use the Selector Gadget tool to find the html nodes needed to scrape the webpage, and I also know that if the Selector Gadget tool is not working that we can right-click and click inspect to get more html node information that might work.
+
+------------------------------------------------------------------------
+
+# Professional Visualization (PV):
+
+------------------------------------------------------------------------
+
+## PV-1 ggplot: grammar of graphics
+
+-   I can use less common geometries, including those from ggplot extension packages.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) This demonstrates use of the leaflet package to make an improved map visualization
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) This code shows extra functions from the ggplot2 being used, such as ggtitle() and coord_fixed() to finish making the Olympic Rings art piece.
+
+-   I can use the correct aesthetics to map variables
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) This code shows the correct aesthetics being used for the leaflet map to improve the original visualization.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) This Pull Request demonstrates a pie chart being output and color coded based on what type and proportion of fake news was in the user selected options of the Shiny App.
+
+-   I understand how geometries inherit aesthetics I can add annotations to my plot
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) This Pull Request demonstrates a detailed pie chart being coded into the Shiny App, with percentage and fake news type being displayed as well as hover information being output for the user when their cursor is on the pie chart
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) This code shows the leaflet map code being written for the improved visualization, uses functions such as addPolygons() to color the map, as well as other function specifications in the addLegend and addControl functions to make a more user friendly and engaging map
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-3-using-apis-evadykaar/pull/11/files) This code shows leaflet being used to map the pass times, and using arrows to go in the order of the pass times
+
+```{r}
+#| include: false
+#| label: PV-1
+
+my_level <- 3
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "PV-1", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I have mastered this objective. I've demonstrated in-depth knowledge of visualizations using leaflet, plotly, and ggplot functions. The visualizations are aesthetically pleasing and user-friendly, with right color schemes and interactive user features such as hover information.
+
+------------------------------------------------------------------------
+
+## PV-2 ggplot: theme
+
+-   I can edit the titles, subtitles, captions, axis labels, etc. to create a clearly labelled plot
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) This Pull Request includes code written for the leaflet map that includes a map title and color labeled legend so the user knows how the map is organized.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/20/files) This Pull Request demonstrates code for the Shiny App pie chart title. The title changes based off of what the user input is. The pie chart is also labeled with the percentage of each fake news type, and includes hover information for the user.
+
+-   I can choose colors ("scales") and themes to make a visually pleasing and accessible plot
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) This Pull Request gives the code for a leaflet map. It is visually nice to look at, using a viridis color scale for countries' respective percentages of people who have confidence in their countries' hospitals and health clinics.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) This Pull Request shows the code for the Shiny App pie chart, and how it changes colors for each different fake news type and includes cursor hover information to be more engaging for the user.
+
+```{r}
+#| include: false
+#| label: PV-2
+
+my_level <- 3
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "PV-2", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I have mastered this objective. I have demonstrated in-depth knowledge about how to properly place captions, legends, and titles. I have also shown knowledge about how to create user-friendly and interactive maps/graphs, with cursor hover information and a pleasing color scale.
+
+------------------------------------------------------------------------
+
+## PV-3 Dynamic visualizations
+
+-   I can use a package like {gganimate} to create self-contained gifs
+
+I do not have evidence of this objective.
+
+-   I can use a package like {plotly}, {ggplotly}, {leaflet}, {ggirafe}, etc. to make interactive html widgets
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) Use of plotly package to make a pie chart
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/21/files) Use of leaflet package to make a map
+
+```{r}
+#| include: false
+#| label: PV-3
+
+my_level <- 1
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "PV-3", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I unfortunately do not have evidence of the first objective, so I will give myself a novice level for this objective. In the second bullet point I show knowledge of using different packages such as plotly and leaflet to create professional visualizations.
+
+------------------------------------------------------------------------
+
+## PV-4 Shiny
+
+-   I can create a functional Shiny app.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) This Pull Request includes code in the global and server R files. Includes a function being written called getType in the global R file, and that code is called when making pie_terms. The getType function is used to change value based off of user input for the Shiny app
+
+-   I understand the principle of reactivity, and how to use it.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) Same Pull Request as above, this is demonstrated in the pie_terms code. It is written so that when the app is processing the information, it says "processing corpus...", and then as it's processing, the getType function is taking in the user input.
+
+```{r}
+#| include: false
+#| label: PV-4
+
+my_level <- 1
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "PV-4", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I believe I have a novice level understanding of this objective. I relied on the help of my group in being able to code in some of my parts such as the getType function in the global R file since I lacked some understanding of the functionality of the Shiny App. However, I was still able to successfully code in the pie chart for the output of the Shiny App.
+
+------------------------------------------------------------------------
+
+# Software Development (SD):
+
+*These objectives relate to your ability to develop correct, usable, well-designed, and sophisticated software in the R language.*
+
+------------------------------------------------------------------------
+
+## SD-1 R programming language details
+
+-   I understand non-standard evaluation (aka "Tidy Eval" or "unquoted objects"), and I can use tunneling in my functions.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/c020f989776af5275f26169fda2876811b9a115b) This shows the function first_art() being called to generate the first art piece.
+
+-   I understand functional programming, and I can use functions as objects in my code design
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/c020f989776af5275f26169fda2876811b9a115b) This Pull Request demonstrates the use of the first_art() function on specified values of seed, n, and palette.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) This code demonstrates the use of the previously defined getType function in the Shiny App
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/introduction-to-webscraping-keasley8/pull/3/files) This pull request is not from me but the code was worked on together in class. It shows the get_cheese() function being used on the cheese url, then printing out cheese_df after get_cheese(url) is run.
+
+-   I understand object-oriented programming, and I can define my own classes and methods.
+
+No specific Pull Request link for this objective.
+
+```{r}
+#| include: false
+#| label: SD-1
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "SD-1", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+Despite not having a specific Pull Request link for the last objective, I still would like to think that I have proficient knowledge in this area. I have been successful in developing correct, usable, and well-designed code as demonstrated in the cited Pull Requests.
+
+------------------------------------------------------------------------
+
+## SD-2 Package creation:
+
+-   I can create a folder that is installable as an R package, possibly using {usethis} helper functions
+
+[Link to Pull Request](https://github.com/aibarra21/horoscoper/pull/4/files) I do not have a Pull Request that directly corresponds to creating a folder; however, this Pull Request shows the three R files that I created to start making our R package.
+
+-   I can document my functions using {roxygen2} style commenting
+
+I do not have a Pull Request for this objective.
+
+-   I can write and run unit tests using {testthat}
+
+I do not have a Pull Request for this objective
+
+-   I can design a package that is user-friendly and has well-designed functions.
+
+[Link to Pull Request](https://github.com/aibarra21/horoscoper/pull/5/files) This Pull Request is one of the functions used in our horoscoper R package. My group and I were able to create a successful R package based on user inputs to return their zodiac sign and other traits that come with their sign.
+
+```{r}
+#| include: false
+#| label: SD-2
+
+my_level <- 1
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "SD-2", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I would give myself a novice level understanding for this objective. I was able to contribute to the R package project to help get the assignment done, but I would not say I have a proficient level understanding of creating R packages.
+
+------------------------------------------------------------------------
+
+# Algorithms and Iteration (AI):
+
+*These objectives ask you to design code-based approaches to statistical computing problems, usually involving iteration to a stopping condition.*
+
+------------------------------------------------------------------------
+
+## AI-1 Creating an algorithm:
+
+-   I can invent and implement my own iterative algorithm.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) This code demonstrates an iterative algorithm being used to create the circle data. This function is then called later in the code when making the five circles.
+
+```{r}
+#| include: false
+#| label: AI-1
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "AI-1", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I am proficient in this objective, I've demonstrated knowledge beyond that of a novice level, and the code is then used to successfully output the Olympic Rings.
+
+------------------------------------------------------------------------
+
+## AI-2 Generative art:
+
+-   I can apply a variety of generative art functions to make a visually pleasing piece.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/c020f989776af5275f26169fda2876811b9a115b) This Pull Request shows the function first_art() being used to randomly generate art.
+
+-   I can explain why particular changes to the code result in particular differences in the visualization.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) This Pull Request has written descriptions about each art piece, and how different functions and inputs change the way the art looks; for example, using runif() and rnorm() for a different distribution of values in the data set for the first art piece.
+
+```{r}
+#| include: false
+#| label: AI-2
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "AI-2", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think I've demonstrated proficiency in this objective, I was able to successfully generate art based on function writing and explained why changes in the code resulted in different ouputs for the art pieces.
+
+------------------------------------------------------------------------
+
+# Code Design (CD):
+
+*These objectives relate to making wise or clever choices in how you implement a procedure in code; including creating functions and objects, or thinking about the clarity and efficiency of processes.*
+
+------------------------------------------------------------------------
+
+## CD-1 Speed and Efficiency:
+
+-   I can recognize moments of possible slowdown in my code, and use built-in functions or parallelizing to speed them up.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) The use of the lapply in this code demonstrates parallelizing the code
+
+-   I always use and design vectorized functions whenever possible.
+
+[Link to Pull Request](https://github.com/keasley8/Lab-9/commit/f08628ac2e903bc554658644f53b1d81ecb4d1da) This demonstrates use of an lapply to iterate from 1-5 for the five circles in the second art piece.
+
+```{r}
+#| include: false
+#| label: CD-1
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "CD-1", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+I think that I am proficient in this objective, the Pull Requests demonstrate my
+knowledge of vectorizing functions and using efficient coding to accomplish
+tasks.
+
+------------------------------------------------------------------------
+
+## CD-2 Object handling:
+
+-   I can make reasonable choices in my code design about when to save intermediate objects.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files)
+This Pull Request shows the getType function in the Shiny App, and shows
+intermediate objects being saved in the function. The intermediate object being
+saved is fake_type, and fake_type is then used to calculate the fake news type
+percentage in the code chunk below it before the function is done. 
+
+-   I can convert objects between types and structures as needed.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/lab-2-visualization-kchan78/pull/16/files) This Pull Request shows use of as.numeric() inside of the case_when() so that the percentage variable is accurate.
+
+```{r}
+#| include: false
+#| label: CD-2
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "CD-2", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+I think that I am proficient in this objective, the cited Pull Requests have
+demonstrated that I know when to save intermediate objects in my code, as well
+as when to convert object types using functions such as as.numeric().
+
+------------------------------------------------------------------------
+
+## CD-3 Supporting functions:
+
+-   I write helper/shortcut functions to streamline repeated tasks and make my code easier to read.
+
+[Link to Pull Request](https://github.com/Cal-Poly-Advanced-R/introduction-to-webscraping-keasley8/pull/3/files) Not my Pull Request but this was done together in class, the function get_cheese() creates a data frame based on the cheese url and scrapes the webpage for specific cheese information.
+
+[Link to Pull Request](https://github.com/keasley8/Project_1_Shiny/pull/19/files) This Pull Request displays the function getType, which is based on the user inputs for the Shiny App. It is used to calculate the percentage of each type of fake news present for the user specified inputs
+
+```{r}
+#| include: false
+#| label: CD-3
+
+my_level <- 2
+
+portfolio_levels <- portfolio_levels %>%
+  bind_rows(
+    tibble(Objective = "CD-3", 
+           Level = my_level)
+    )
+```
+
+### Level: `r my_level`
+
+### Justification:
+
+I think that I am proficient in this objective. I've been able to show that I can write functions to make my code easier to read, as well as being efficient in running repeated tasks.
+
+------------------------------------------------------------------------
+
+# Summary
+
+```{r}
+#| echo: false
+#| label: summary-graph
+
+portfolio_levels %>%
+  mutate(
+    Category = str_extract(Objective, "[A-Z]{2}"),
+    Level = factor(Level)
+  ) %>%
+  ggplot(
+    aes(x = Level, 
+        y = (..count..)/sum(..count..)
+        )
+    ) +
+  geom_bar() +
+  labs(x = "Level",
+       y = "Percent") +
+  theme_bw() +
+  scale_y_continuous(labels = scales::percent)
+```
+
+## Grade
+
+Based on the summary plot above, I believe I have earned a C+ in STAT 541.
+
+### Justification
+The summary plot shows about 10% for mastery, about 75% proficiency, and 
+just under 20% novice. I think that I have been able to get lots of valuable
+coding experience this class, for example working with APIs for the first time,
+and web-scraping for the first time, and creating my first Shiny App and R 
+package. Even though the percentages show my Portfolio grade at around a C, 
+I have obtained information and valuable coding experiences in this class and 
+I feel that I got more than a C grade's worth of coding experiences, so I
+feel that my final grade would be around a C+.
+
