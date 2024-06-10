@@ -124,7 +124,7 @@ No specific link for a Pull Request for this one but I always create new R proje
 #| include: false
 #| label: RW-1
 
-my_level <- 1
+my_level <- 2
 
 portfolio_levels <- portfolio_levels %>%
   bind_rows(
@@ -136,6 +136,9 @@ portfolio_levels <- portfolio_levels %>%
 ### Level: `r my_level`
 
 ### Justification:
+I would give myself a proficient level for this objective, I feel that the 
+Pull Requests give evidence that I am comfortable using Github and R Projects
+to track and organize my code.
 
 ------------------------------------------------------------------------
 
@@ -831,7 +834,7 @@ Based on the summary plot above, I believe I have earned a C+ in STAT 541.
 
 ### Justification
 The summary plot shows about 10% for mastery, about 75% proficiency, and 
-just under 20% novice. I think that I have been able to get lots of valuable
+about 15% novice. I think that I have been able to get lots of valuable
 coding experience this class, for example working with APIs for the first time,
 and web-scraping for the first time, and creating my first Shiny App and R 
 package. Even though the percentages show my Portfolio grade at around a C, 
